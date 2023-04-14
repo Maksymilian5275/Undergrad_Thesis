@@ -1,0 +1,93 @@
+\documentclass[a4paper,11pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%          PACKAGES            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{blindtext}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{physics}
+\usepackage{wrapfig}
+\usepackage{cancel}
+\usepackage{marginnote}
+\usepackage{setspace}
+\usepackage{derivative}
+\usepackage{color, soul}
+\usepackage[british]{babel}
+\usepackage[useregional]{datetime2}
+\DTMlangsetup[en-GB]{showdayofmonth=false}
+\usepackage[justification=centering,margin=5pt,labelfont={sc,bf},textfont=it,font=small]{caption}
+\usepackage[left=20mm, right=20mm, top=20mm, bottom=20mm]{geometry}
+%\allowdisplaybreaks
+\doublespacing
+\setulcolor{blue}
+\usepackage{lmodern}
+
+\numberwithin{equation}{section}
+
+\newlength\longest
+%\marginnote{\color{blue}{text}}[-2cm]
+
+\newenvironment{dedication}
+    {\vspace{6ex}\begin{quotation}\begin{center}\begin{em}}
+    {\par\end{em}\end{center}\end{quotation}}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,      
+    urlcolor=black,
+    citecolor=blue,
+    pdftitle={Orbital Motion About a Black Hole},
+    pdfauthor={Karl Coogan}
+    pdfpagemode=FullScreen,
+}
+
+\usepackage{titling}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usepackage[nottoc,notlof,notlot,numbib]{tocbibind} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%          PREAMBLE            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Orbital Motion About a Black Hole\\
+{\Large University College Dublin}}
+\author{Karl Coogan}
+\date{\today}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%          DOCUMENT            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\input{sec1-Abstract.tex}
+
+\begin{spacing}{1}
+\tableofcontents
+\listoffigures
+\listoftables
+\thispagestyle{empty}
+\end{spacing}
+\clearpage
+\pagenumbering{arabic}
+
+\input{sec2-Introduction.tex}
+
+\input{sec3-BlackHoleOrbits.tex}
+
+\section{Conclusions}
+\input{sec4-Conclusions.tex}
+\begin{spacing}{2}
+\input{sec5-Bibliography.tex}
+\end{spacing}
+\appendix
+\input{sec6-Appendix.tex}
+
+\end{document}

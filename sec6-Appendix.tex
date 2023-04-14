@@ -1,0 +1,98 @@
+\onecolumn
+\section{Appendix: Derivations}
+\subsection{Definition: Einstein Tensor}
+\label{apx:einsteintensor}
+We first define the Riemann tensor as
+\begin{equation}
+\text{Riem}=R^a{}_{bcd}\pdv{}{x^a}\otimes\odif{x^b}\otimes\dd{x^c}\otimes\dd{x^d},
+\end{equation}
+with components
+\begin{equation}
+R^a{}_{bcd}=\pdif*{c}\Gamma^a_{bd}+\Gamma^e_{bd}\Gamma^a_{ec}-\pdif*{d}\Gamma^a_{bc}-\Gamma^e_{bc}\Gamma^a_{ed}.
+\end{equation}
+Then the Ricci tensor is defined as
+\begin{equation}
+\text{Ric}=R_{ab}\odif{x^a}\otimes\odif{x^b},
+\end{equation}
+which is just a contraction of the Riemann tensor in the first and third index, by which
+\begin{equation}
+R^a{}_{bad}=R_{bd}.
+\end{equation}
+Finally, we can define the Einstein tensor in terms of the Ricci tensor as
+\begin{equation}
+G_{ab}=R_{ab}-\frac{1}{2}Rg_{ab}.
+\end{equation}
+
+\subsection{Non-zero values of the connection for the geodesic equations}
+\label{apx:connectvalues}
+Recalling the definition for the Christoffel symbols from Eqn.~\eqref{eqn:christoffel},
+\begin{equation}
+\Gamma^\alpha{}_{\beta\delta}=\frac{1}{2}g^{\alpha \gamma}(g_{\gamma\beta;\delta}+g_{\gamma\delta;\beta}-g_{\beta\delta;\gamma}),
+\end{equation}
+we can define the non-zero values of the connection for the geodesic equation below.
+
+$$\arraycolsep=25pt
+\begin{array}{ccc}
+\Gamma^r_{tt}=\dfrac{M(r-2M)}{r^3} & \Gamma^r_{rr}=-\dfrac{M}{r(r-2M)} & \Gamma^r_{\theta\theta}=-(r-2M)\\
+\Gamma^r_{\phi\phi}=-(r-2M)\sin^2(\theta) & \Gamma^r_{rt}=\dfrac{M)}{r(r-2M)} & \Gamma^\theta_{r\theta}=\dfrac{1}{r}\\
+\Gamma^\theta_{\phi\phi}=-\sin(\theta)\cos(\theta) & \Gamma^\phi_{r\phi}=\dfrac{1}{r} & \Gamma^\phi_{\theta\phi}=\dfrac{\cos(\theta)}{\sin(\theta)}
+\end{array}$$
+
+\subsection{Darwin parameterisation}
+\label{apx:darwin}
+Using the chain rule we may utilise the Darwin parameterisation in the following way.
+\begin{equation}
+\dv{t}{\chi}=\dv{t}{\tau}\dv{\tau}{r}\dv{r}{\chi}
+\end{equation}
+Breaking this into parts, we get
+\begin{align}
+\dv{t}{\tau}&=\frac{r}{r-2M}\left(\frac{(p-2-2e)(p-2+2e)}{p(p-3-e^2)}\right)\\
+&=\left(\frac{pM}{1+e\cos(\chi)}\left(\frac{1}{\frac{pM}{1+e\cos(\chi)}-2M} \right) \right)\left(\frac{(p-2-2e)(p-2+2e)}{p(p-3-e^2)}\right)\\
+&=\left(\frac{pM}{1+e\cos(\chi)}\left(\frac{1}{\frac{pM-2M-2Me\cos(\chi)}{1+e\cos(\chi)}} \right) \right)\left(\frac{(p-2-2e)(p-2+2e)}{p(p-3-e^2)}\right)\\
+&=\left(\frac{pM}{1+e\cos(\chi)}\left(\frac{1+e\cos(\chi)}{pM-2M-2Me\cos(\chi)} \right) \right)\left(\frac{(p-2-2e)(p-2+2e)}{p(p-3-e^2)}\right)\\
+&=\left(\frac{p}{p-2-2e\cos(\chi)} \right)\left(\frac{(p-2-2e)(p-2+2e)}{p(p-3-e^2)}\right),\\
+&\\
+\dv{\tau}{r}&=\frac{1}{\sqrt{E^2-V}}\\
+&=\left(\frac{(p-2-2e)(p-2+2e)}{p(p-3-e^2)}-\frac{r-2M}{r}\left(1+\frac{1}{r^2}\left(\frac{p^2M^2}{p-3-e^2} \right) \right)\right)^{-\frac{1}{2}}\\
+\begin{split}
+&=\left(\frac{(p-2-2e)(p-2+2e)}{p(p-3-e^2)}\right)^{-\frac{1}{2}}\\
+&\qquad-\left(1-\frac{(1+e\cos(\chi))2M}{pM} \right)\left(1+\frac{p^2M^2(1-e\cos(\chi))^2}{p^2M^2(p-3-e^2)}\right)^{-\frac{1}{2}}
+\end{split}\\
+\begin{split}
+&=\left(\frac{(p-2-2e)(p-2+2e)}{p(p-3-e^2)}\right)^{-\frac{1}{2}}\\
+&\qquad-\left(\frac{((p-2+2e\cos(\chi))(p-2-e^2+2e\cos(\chi)+e^2\cos^2(\chi))}{p(p-3-e^2)} \right)^{-\frac{1}{2}}
+\end{split}\\
+&=\left(e^2\sin^2(\chi)\left(\frac{p-6-2e\cos(\chi)}{p(p-3-e^2)} \right)\right)^{-\frac{1}{2}},\\
+&\\
+\dv{r}{\chi}&=\left(\frac{pMe\sin(\chi)}{(1+e\cos(\chi))^2} \right).
+\end{align}
+Hence,
+\begin{align}
+\dv{t}{\chi}&=\dv{t}{\tau}\dv{\tau}{r}\dv{r}{\chi},\\
+\begin{split}
+&=\left(\frac{p}{p-2-2e\cos(\chi)} \right)\left(\frac{(p-2-2e)(p-2+2e)}{p(p-3-e^2)}\right)\\
+&\qquad\times\left(e^2\sin^2(\chi)\left(\frac{p-6-2e\cos(\chi)}{p(p-3-e^2)} \right)\right)^{-\frac{1}{2}}\\
+&\qquad\times\left(\frac{pMe\sin(\chi)}{(1+e\cos(\chi))^2} \right),
+\end{split}\\
+\begin{split}
+&=p^2M(p-2+2e)^{\frac{1}{2}}(p-2-2e)^{\frac{1}{2}}(p-2-2e\cos(\chi))^{-1}\\
+&\qquad\times(p-6-2e\cos(\chi))^{-\frac{1}{2}}(1+e\cos(\chi))^{-2}.
+\end{split}
+\end{align}
+We also see that 
+\begin{equation}
+\dv{\phi}{\chi}=\dv{\phi}{\tau}\dv{\tau}{r}\dv{r}{\chi},
+\end{equation}
+where the latter two terms are the same as before, while the first term is known to be
+\begin{equation}
+\dv{\phi}{\tau}=\frac{L}{r^2}=\left(\frac{p^2M^2}{p-3-e^2} \right)^{\frac{1}{2}}\left(\frac{1+e\cos(\chi)}{pM} \right)^2.
+\end{equation}
+After substitution we get
+\begin{align}
+    \dv{\phi}{\chi}&=\left(\frac{L}{r^2}\right)\left(e^2\sin^2(\chi)\left(\frac{p-6-2e\cos(\chi)}{p(p-3-e^2)}\right)\right)^{-\frac{1}{2}}\left(\frac{pMe\sin(\chi)}{(1+e\cos(\chi))^2} \right),\\
+    \begin{split}
+    &=\left(\left(\frac{p^2M^2}{p-3-e^2} \right)\left(\frac{1+e\cos(\chi)}{pM} \right)^2\right)\left(\frac{(p(p-3-e^2))^{\frac{1}{2}}}{e\sin(\chi)(p-6-2e\cos(\chi))^{\frac{1}{2}}} \right)\\
+    &\qquad\times\left(\frac{pMe\sin(\chi)}{(1+e\cos(\chi))^2} \right),
+    \end{split}\\
+    &=\left(p(p-6-2e\cos(\chi))^{-1}\right)^{\frac{1}{2}}.
+\end{align}
