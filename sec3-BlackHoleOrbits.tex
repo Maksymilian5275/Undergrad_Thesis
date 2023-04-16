@@ -470,17 +470,17 @@ where $\Gamma$ is the average of $\dd{t}/\dd{\lambda}$ with respect to $\lambda$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Resonant Orbits}
-Examining the two frequencies $\Upsilon_r$ and $\Upsilon_\theta$, it is possible to come across instances in which they are commensurate, whereby there exist integers $(k,n)$ such that
+Examining the two frequencies $\Upsilon_\theta$ and $\Upsilon_r$, it is possible to come across instances in which they are commensurate, whereby there exist integers $(k,n)$ such that
 \begin{equation}\label{eqn:resCond}
-    k\Upsilon_r=n\Upsilon_\theta,
+    k\Upsilon_\theta=n\Upsilon_r,
 \end{equation}
 and the path followed in the $(r,\theta)$ plot has no deviation once it loops back on itself \cite{ResonantCensus}.
-In simpler terms, this equation says it takes an equal amount of time for the polar motion to pass through $n$ turning points as it does for the radial motion to pass through $k$ turning points \cite{brinkKerrResonance}. 
+In simpler terms, this equation, when satisfied, says it takes an equal amount of time for the polar motion to pass through $k$ turning points as it does for the radial motion to pass through $n$ turning points \cite{brinkKerrResonance}. 
 
-Once a method for calculating frequencies has been established and orbits are understood through $p$-$e$-$x$ parameterisation, then it becomes relatively simple to calculate resonant orbits where $n=1$.
-The other option of achieving resonance where $k=1$ is not possible in Kerr spacetime as the radial frequency is always the smallest out of all three frequencies \cite{brinkKerrResonance}, meaning that the condition that $n>k$ is in place and prevents any analysis of resonance where $k=1$.
+Once a method for calculating frequencies has been established and orbits are understood through $p$-$e$-$x$ parameterisation, then it becomes relatively simple to calculate resonant orbits where $k=1$.
+The other option of achieving resonance where $n=1$ is not possible in Kerr spacetime as the radial frequency is always the smallest out of all three frequencies \cite{brinkKerrResonance}, meaning that the condition $n>k$ is in place and prevents any analysis of resonance where $n=1$.
 
-Although this does not restrict our analysis at all, as resonant orbits of such a low order where $n=1$ are trivial -- instead we move on to slightly higher-order resonant orbits.
+Although this does not restrict our analysis at all, instead we move on to slightly higher-order resonant orbits.
 An example of a $(2,3)$ resonant orbit can be seen in Fig.~\eqref{fig:resoexample2-3}.
 
 \begin{figure}[!ht]
@@ -517,7 +517,7 @@ It can be seen that for a resonant orbit with values $(p_0,e_0,x_0)$, if $x_0$ i
 Under visual inspection, $e$ appears to have very little effect on the resonant value of $p$.
 Therefore, we wish to interpolate between values at $e=0$ in the $p$-$x$ plane to create a linear approximation before extrapolating out for $e>0$.
 This will create a set of $p$ values that could serve as a set of initial values for root-finding when calculating resonant orbits.
-For the linear approximation we solve the equation $3\Upsilon_r=2\Upsilon_\theta$ for $(a,e,x)=(0.9,0,\pm 1)$, where $x=-1$ corresponds to the retrograde orbit and $x=1$ corresponds to the prograde orbit.
+For the linear approximation we solve the equation $2\Upsilon_\theta=3\Upsilon_r$ for $(a,e,x)=(0.9,0,\pm 1)$, where $x=-1$ corresponds to the retrograde orbit and $x=1$ corresponds to the prograde orbit.
 This problem corresponds to finding the non-asymptotic points of intersection in the graphs of Fig.~\eqref{fig:proretfreqs}, where the point of intersection for the prograde orbit is $p_\text{pro}=4.9626$ and the retrograde orbit is $p_\text{ret}=15.2677$.
 A straight line of the form $\alpha+\beta x$ is calculated with coefficients $(\alpha,\beta)=(10.1152,-5.1525)$ and then extrapolated out to create the plane
 \begin{equation}\label{eqn:planeequation}
