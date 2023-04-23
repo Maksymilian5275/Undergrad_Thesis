@@ -21404,7 +21404,7 @@ Cell[BoxData["\<\"proretfreqplots.pdf\"\>"], "Output",
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1141.2, 574.8},
+WindowSize->{1141.2, 568.8},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
 TaggingRules-><|"TryRealOnly" -> False|>,
 CellContext->Notebook,
@@ -21428,7 +21428,7 @@ Cell[558, 20, 157, 3, 41, "Text",ExpressionUUID->"3a016007-91d8-4065-9b90-7cc345
 Cell[CellGroupData[{
 Cell[740, 27, 456, 8, 80, "Input",ExpressionUUID->"f6751383-0c14-46d3-a073-806eedfbf913"],
 Cell[1199, 37, 466, 7, 39, "Output",ExpressionUUID->"947f3d6e-ab71-47d2-a9db-dcee0db51350"],
-Cell[1668, 46, 454, 6, 86, "Output",ExpressionUUID->"26b23a95-482c-46de-b975-1b2b3ddaaf14"]
+Cell[1668, 46, 454, 6, 39, "Output",ExpressionUUID->"26b23a95-482c-46de-b975-1b2b3ddaaf14"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[2159, 57, 206, 4, 81, "Section",ExpressionUUID->"1225b06b-3e63-4673-9fbd-4951fa51b8ee"],
